@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
               <div className="space-y-5 flex flex-col font-bold justify-center items-center tracking-wide">
                   <h1 className="text-xl lightGold italic text-center">Ikemi <span className="text-lg">©{year}</span> </h1>
-                <p className="text-lg lightGold flex flex-wrap gap-2 justify-center uppercase items-center">
+                  <p className="text-lg lightGold flex flex-wrap gap-2 justify-center uppercase items-center">
                     IKEMI
                     <span className={`h-2 w-2 rounded-full lightGoldBackground }`}></span>
                     MAKEUP ARTIST

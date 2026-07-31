@@ -11,7 +11,7 @@ const Portfolio = () => {
  
   return (
     <div>
-      <BackHome />
+      {/* <BackHome /> */}
       <Intro />
       <Buttons filter={filter} setFilter={setFilter} />
       <Portrait filter={filter} hover={hover} setHover={setHover}/>

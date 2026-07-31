@@ -1,36 +1,3 @@
-// import {useEffect, useState} from "react"
-// import UserRequest from "./DetailComponent/UserRequest"
-// import RequestDetails from "./DetailComponent/RequestDetails"
-// import Others from "./Others"
-
-// const Details = ({ filter, form }) => {
-//   const [reply, setReply] = useState(() => {
-//     const saved = localStorage.getItem("reply")
-//     return saved ? JSON.parse(saved) : []
-//   })
-//   useEffect(() => {
-//     localStorage.setItem("reply", JSON.stringify(reply))
-//   }, [reply])
-//   const [replies, setReplies] = useState(null)
-//   const hadleReply = (e) => {
-//     e.preventDefault()
-//     setReplies(reply)
-//     setReply("")
-//   }
-//   return (
-//     <div className="sm:m-5">
-//       <UserRequest />
-//       <div className="espressoBackground p-5 flex justify-between items-center reply-width gap-10 flex-wrap itemSpan WeekSitting">
-//         <RequestDetails filter={filter} form={form} reply={reply} setReply={setReply} replies={replies} hadleReply={hadleReply}/>
-//       </div>
-//       <Others filter={filter} form={form} />
-//     </div>
-//   )
-// }
-
-// export default Details
-
-
 import UserRequest from "./DetailComponent/UserRequest"
 import RequestDetails from "./DetailComponent/RequestDetails"
 

@@ -8,7 +8,7 @@ import BackHome from "./Services/BackHome"
 const ServicePage = () => {
   return (
     <>
-    <BackHome />
+    {/* <BackHome /> */}
     <Intro />
     <hr className="border-custom-gold border-t my-6" />
     <List />
