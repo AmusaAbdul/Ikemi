@@ -3,7 +3,6 @@ import Intro from "./Contact/Intro"
 import ContactDetails from "./Contact/Contact"
 import Form from "./Contact/Form"
 import Footer from "./Contact/Footer"
-import BackHome from "./Contact/BackHome"
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -29,7 +28,6 @@ const Contact = () => {
     }
   return (
     <div>
-      {/* <BackHome /> */}
       <Intro />
       <hr className="border-custom-gold border-t my-6" />
       <ContactDetails />
