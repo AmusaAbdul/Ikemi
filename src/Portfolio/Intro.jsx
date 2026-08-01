@@ -1,7 +1,12 @@
+import {useEffect} from "react-router-dom"
 
 const Intro = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <div id="servicePage" className="flex justify-center mt-20">
+        <div className="flex justify-center mt-20">
             <div className="flex flex-col justify-center items-center">
                 <div className="text-center p-5 space-y-5">
                     <p className="text-custom-gold tracking-wider text-sm sm:text-base">PORTFOLIO</p>

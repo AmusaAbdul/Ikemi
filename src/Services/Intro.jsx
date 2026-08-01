@@ -1,5 +1,10 @@
+import {useEffect} from "react-router-dom"
 
 const Intro = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <>
       <div id="servicePage" className="flex justify-center mt-20">
