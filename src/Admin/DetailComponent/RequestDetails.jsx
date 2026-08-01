@@ -8,7 +8,7 @@ const RequestDetails = ({ request, updateRequest, deleteRequest }) => {
     const [messages, setMessages] = useState([])
 
     const fetchMessages = () => {
-        fetch(`http://localhost:3001/api/requests/${request.id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/requests/${request.id}`)
             .then(res => res.json())
             .then(data => setMessages(data.request_messages || []))
     }
@@ -29,7 +29,7 @@ const RequestDetails = ({ request, updateRequest, deleteRequest }) => {
         setSending(true)
         setSent(false)
         try {
-            const res = await fetch(`http://localhost:3001/api/requests/${request.id}/reply`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/requests/${request.id}/reply`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: reply, newStatus }),
@@ -38,7 +38,7 @@ const RequestDetails = ({ request, updateRequest, deleteRequest }) => {
                 updateRequest(request.id, { status: newStatus })
                 setReply("")
                 setSent(true)
-                fetchMessages() // pull the real, updated thread
+                fetchMessages() 
                 setTimeout(() => setSent(false), 3000)
             }
         } finally {

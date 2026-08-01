@@ -9,7 +9,7 @@ const AdminPage = () => {
     const [selectedId, setSelectedId] = useState(requests[0]?.id)
 
     useEffect(() => {
-        fetch('http://localhost:3001/api/requests')
+        fetch(`${import.meta.env.VITE_API_URL}/api/requests`)
             .then(res => res.json())
             .then(data => { setRequests(data); setLoading(false) })
             .catch((err) => { console.error('Fetch failed:', err); setLoading(false) })
@@ -27,7 +27,7 @@ const AdminPage = () => {
 
     const deleteRequest = async (id) => {
         try {
-            const res = await fetch(`http://localhost:3001/api/requests/${id}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/requests/${id}`, {
                 method: 'DELETE',
             });
             if (res.ok) {

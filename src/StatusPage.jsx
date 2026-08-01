@@ -13,7 +13,7 @@ const StatusPage = () => {
     const [sending, setSending] = useState(false)
 
     const fetchRequest = () => {
-        fetch(`http://localhost:3001/api/requests/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/requests/${id}`)
             .then(res => { if (!res.ok) throw new Error(); return res.json() })
             .then(data => { setRequest(data); setLoading(false) })
             .catch(() => { setNotFound(true); setLoading(false) })
@@ -31,9 +31,10 @@ const StatusPage = () => {
         if (imageFile) formData.append('image', imageFile)
 
         try {
-            const res = await fetch(`http://localhost:3001/api/requests/${id}/message`, {
+            
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/requests/${id}/message`, {
                 method: 'POST',
-                body: formData, // no Content-Type header — the browser sets it automatically with the correct boundary
+                body: formData, 
             })
             if (res.ok) {
                 setReply("")
