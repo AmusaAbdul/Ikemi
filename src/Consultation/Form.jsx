@@ -41,7 +41,7 @@ const Form = ({ form, handleForm, setFilter, filter, state, handleSubmit, submit
                     </span>
                 </div>
                 <div className="flex flex-col space-y-3 justify-center items-center">
-                    <button type="submit" disabled={state?.submitting} className="p-2 text-center mt-5 text-sm tracking-wider espressoBackground text-white">SEND CONSULTATION REQUEST</button>
+                        <button type="submit" disabled={state?.submitting} className="p-2 text-center mt-5 text-sm tracking-wider espressoBackground text-white">{state?.submitting ? "SENDING" : "SEND CONSULTATION REQUEST"} </button>
                         {state?.errors && <p className="text-red-400 text-sm">{state.errors}</p>}
                     <p className="lightGold tracking-wide text-center">No payment is taken at this stage. A deposit is only requested once a date is held for you.</p>
                 </div>
