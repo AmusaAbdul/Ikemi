@@ -31,7 +31,6 @@ const StatusPage = () => {
         if (imageFile) formData.append('image', imageFile)
 
         try {
-            
             const res = await fetch(`${import.meta.env.VITE_API_URL}/api/requests/${id}/message`, {
                 method: 'POST',
                 body: formData, 

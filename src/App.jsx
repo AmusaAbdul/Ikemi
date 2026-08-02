@@ -1,4 +1,3 @@
-import './App.css'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import { useState, useEffect } from 'react'
 import RoutePages from "./RoutePages"
