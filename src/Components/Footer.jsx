@@ -9,9 +9,9 @@ const Footer = () => {
           <h1 className="text-xl lightGold italic text-center">Ikemi <span className="text-lg">©{year}</span> </h1>
           <p className="text-lg lightGold flex flex-wrap gap-2 justify-center uppercase items-center">
             <span className="text-center">IKEMI</span>
-            <span className={`h-2 w-2 rounded-full lightGoldBackground}`}></span>
+            <span className={`h-2 w-2 rounded-full lightGoldBackground`}></span>
             <span className="text-center">MAKEUP ARTIST</span>
-            <span className={`h-2 w-2 rounded-full lightGoldBackground}`}></span>
+            <span className={`h-2 w-2 rounded-full lightGoldBackground`}></span>
             <span className="text-center">Egbeda | Ikotun | Ikeja, Lagos</span>
           </p>
           <Link to={"/contact"} className="underline decoration-custom-gold decoration-2 underline-offset-6">CONTACT US</Link>
