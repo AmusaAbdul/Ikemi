@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const SmallScreen = ({isOpen, setIsOpen, handleTouchEnd, handleTouchMove, handleTouchStart, isDragging}) => {
+const SmallScreen = ({isOpen, setIsOpen, handleTouchEnd, handleTouchMove, handleTouchStart, isDragging, translateX}) => {
   return (
       <div className="lg:hidden">
           <div className="flex justify-between items-center p-5">

@@ -34,7 +34,7 @@ const Header = () => {
   };
   return (
     <>
-      <SmallScreen isOpen={isOpen} setIsOpen={setIsOpen} handleTouchStart={handleTouchStart}
+      <SmallScreen isOpen={isOpen} setIsOpen={setIsOpen} handleTouchStart={handleTouchStart} translateX={translateX}
         handleTouchMove={handleTouchMove} handleTouchEnd={handleTouchEnd} isDragging={isDragging}
       />
       <LargeScreen />
